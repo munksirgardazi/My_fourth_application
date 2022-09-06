@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
-  const SecondPage({Key? key}) : super(key: key);
+  String? name;
+  SecondPage({
+    this.name,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Container(child: const Text('samik')),
+      body: Center(
+        child: Container(
+          child: Text(name!),
+        ),
+      ),
     );
   }
 }

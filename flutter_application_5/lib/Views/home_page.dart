@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_5/Views/second_page.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final TextEditingController textController = TextEditingController();
+  String? text;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +22,9 @@ class HomePage extends StatelessWidget {
             child: InkWell(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const SecondPage()));
+                    builder: (context) => SecondPage(
+                          name: textController.text,
+                        )));
               },
               child: Container(
                 height: 200,
@@ -29,6 +38,12 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          TextField(
+            controller: textController,
+          )
         ],
       ),
     );
