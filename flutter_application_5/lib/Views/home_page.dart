@@ -21,9 +21,12 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.all(20.0),
             child: InkWell(
               onTap: () {
+                setState(() {
+                  text = textController.text;
+                });
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => SecondPage(
-                          name: textController.text,
+                          name: text,
                         )));
               },
               child: Container(
