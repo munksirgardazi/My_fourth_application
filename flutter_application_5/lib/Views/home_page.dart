@@ -54,7 +54,40 @@ class _HomePageState extends State<HomePage> {
           ),
           TextField(
             controller: textController,
-          )
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'Name',
+              hintText: 'Enter your name ',
+              suffix: Icon(
+                Icons.person,
+                color: Color.fromARGB(255, 23, 160, 91),
+                size: 30,
+              ),
+              suffixIcon: Icon(Icons.abc, size: 20, color: Colors.amber),
+              prefixIcon: Icon(Icons.abc_sharp),
+            ),
+            obscureText: true,
+            // for passwords
+            obscuringCharacter: '+',
+            style: TextStyle(
+              fontSize: 20,
+            ),
+            // character that will be used for hidden text
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          ElevatedButton(
+            onPressed: () {},
+            child: const Text('Login'),
+            style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all(Colors.amber),
+                backgroundColor: MaterialStateProperty.all(
+                  Colors.blue,
+                ),
+                shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)))),
+          ),
         ],
       ),
     );
