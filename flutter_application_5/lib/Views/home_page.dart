@@ -53,8 +53,15 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           TextField(
+
             controller: textController,
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: ' Name',
+              hintText: 'Enter your name',
+            ),
           )
+          
         ],
       ),
     );
