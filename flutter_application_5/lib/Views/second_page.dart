@@ -23,10 +23,10 @@ class SecondPage extends StatelessWidget {
       body: Container(
         color: Color.fromARGB(96, 2, 2, 2),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Usename'),
                 Container(
@@ -39,7 +39,7 @@ class SecondPage extends StatelessWidget {
               ],
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Password'),
                 Container(
